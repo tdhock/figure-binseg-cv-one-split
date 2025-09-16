@@ -1,0 +1,766 @@
+{
+ "geoms": {
+ "geom1_segment_data": {
+ "geom": "segment",
+"classed": "geom1_segment_data",
+"aes": {
+ "x": "position",
+"y": "signal",
+"colour": "set",
+"xend": "position",
+"yend": "mean",
+"showSelected1": "segments",
+"showSelected2": "set" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"size":        1,
+"showSelected": [ "segments", "set" ],
+"help": "Vertical segments show residuals (difference between data and mean)",
+"help_showSelected": [ "segments", "set" ] 
+},
+"types": {
+ "colour": "rgb",
+"x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"showSelected1": "integer",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom2_point_data": {
+ "geom": "point",
+"classed": "geom2_point_data",
+"aes": {
+ "x": "position",
+"y": "signal",
+"fill": "set",
+"showSelected1": "set" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        3,
+"colour": "#BEBEBE",
+"help": "One point per data to segment",
+"showSelected": "set",
+"help_showSelected": "set" 
+},
+"types": {
+ "fill": "rgb",
+"x": "numeric",
+"y": "numeric",
+"showSelected1": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom3_vline_data": {
+ "geom": "vline",
+"classed": "geom3_vline_data",
+"aes": {
+ "xintercept": "start.pos",
+"showSelected1": "segments" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"linetype": "dashed",
+"size":        1,
+"help": "Change-points detected",
+"showSelected": "segments",
+"help_showSelected": "segments" 
+},
+"types": {
+ "xintercept": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom4_segment_data": {
+ "geom": "segment",
+"classed": "geom4_segment_data",
+"aes": {
+ "x": "start.pos",
+"y": "mean",
+"xend": "end.pos",
+"yend": "mean",
+"showSelected1": "segments" 
+},
+"params": {
+ "lineend": "butt",
+"na.rm": false,
+"na.rm": false,
+"help": "Segment means",
+"showSelected": "segments",
+"help_showSelected": "segments" 
+},
+"types": {
+ "x": "numeric",
+"xend": "numeric",
+"y": "numeric",
+"yend": "numeric",
+"showSelected1": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom5_line_loss": {
+ "geom": "line",
+"classed": "geom5_line_loss",
+"aes": {
+ "x": "segments",
+"y": "Total_Square_Loss",
+"colour": "set",
+"group": "set",
+"showSelected1": "set" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"showSelected": "set",
+"help": "Total squared error for each set",
+"help_showSelected": "set" 
+},
+"types": {
+ "colour": "rgb",
+"y": "numeric",
+"x": "numeric",
+"group": "character",
+"showSelected1": "character",
+"PANEL": "integer" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"group" 
+],
+"subset_order": [
+ "showSelected1" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom6_point_loss": {
+ "geom": "point",
+"classed": "geom6_point_loss",
+"aes": {
+ "x": "segments",
+"y": "Total_Square_Loss",
+"colour": "set",
+"fill": "point",
+"showSelected1": "set",
+"showSelected2": "point" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"size":        4,
+"help": "Black point emphasizes min of each curve",
+"showSelected": [ "set", "point" ],
+"help_showSelected": [ "set", "point" ] 
+},
+"types": {
+ "fill": "character",
+"colour": "rgb",
+"y": "numeric",
+"x": "numeric",
+"showSelected1": "character",
+"showSelected2": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"subset_order": [
+ "showSelected1",
+"showSelected2" 
+],
+"chunks": 1,
+"total": 1 
+},
+"geom7_labelaligned_loss": {
+ "geom": "label_aligned",
+"classed": "geom7_labelaligned_loss",
+"aes": {
+ "x": "segments",
+"y": "Total_Square_Loss",
+"colour": "set",
+"label": "set",
+"clickSelects": "set" 
+},
+"params": {
+ "label_r":     0.15,
+"alignment": "vertical",
+"min_distance":      0.1,
+"background_rect": true,
+"na.rm": false,
+"na.rm": false,
+"hjust":        0,
+"clickSelects": "set",
+"help_clickSelects": "set" 
+},
+"types": {
+ "colour": "rgb",
+"y": "numeric",
+"x": "numeric",
+"label": "character",
+"clickSelects": "character",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [],
+"subset_order": [],
+"chunks": 1,
+"total": 1 
+},
+"geom8_tallrect_loss": {
+ "geom": "tallrect",
+"classed": "geom8_tallrect_loss",
+"aes": {
+ "key": "key",
+"xmin": "min",
+"xmax": "max",
+"clickSelects.variable": "var",
+"clickSelects.value": "click.val",
+"showSelected.variable": "var",
+"showSelected.value": "show.val" 
+},
+"params": {
+ "na.rm": false,
+"na.rm": false,
+"alpha":      0.5,
+"showSelected": "show.val",
+"clickSelects": "click.val",
+"help_showSelected": "segments",
+"help_clickSelects": "segments" 
+},
+"types": {
+ "xmin": "numeric",
+"xmax": "numeric",
+"key": "character",
+"clickSelects.variable": "character",
+"clickSelects.value": "integer",
+"showSelected.variable": "character",
+"showSelected.value": "integer",
+"PANEL": "integer",
+"group": "character" 
+},
+"chunk_order": [],
+"nest_order": [
+ "showSelected.variable",
+"showSelected.value" 
+],
+"subset_order": [
+ "showSelected.variable" 
+],
+"chunks": 1,
+"total": 1 
+} 
+},
+"selectors": {
+ "set": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"clickSelects": true,
+"selected": [ "subtrain", "validation" ],
+"levels": [ "subtrain", "validation" ],
+"update": [
+ "geom1_segment_data",
+"geom2_point_data",
+"geom5_line_loss",
+"geom6_point_loss",
+"geom7_labelaligned_loss" 
+] 
+},
+"point": {
+ "type": "multiple",
+"legend": true,
+"is.variable.value": false,
+"showSelected": true,
+"selected": [ "other", "min" ],
+"levels": [ "other", "min" ],
+"update": [
+ "geom6_point_loss" 
+] 
+},
+"segments": {
+ "is.variable.value": true,
+"type": "single",
+"showSelected": true,
+"clickSelects": true,
+"selected": "5",
+"update": [
+ "geom1_segment_data",
+"geom3_vline_data",
+"geom4_segment_data",
+"geom8_tallrect_loss" 
+] 
+} 
+},
+"plots": {
+ "data": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "set": {
+ "guide": "legend",
+"geoms": [ "path", "point" ],
+"title": "set",
+"class": "set",
+"selector": "set",
+"is_discrete": true,
+"legend_type": [ "fill", "colour" ],
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pathcolour": "#66C2A5",
+"pathsize":        1,
+"pathlinetype":        1,
+"label": "subtrain",
+"pointfill": "#66C2A5",
+"pointshape":       19,
+"pointcolour": "#BEBEBE",
+"pointsize":        3,
+"pointstroke":      0.5 
+},
+{
+ "pathcolour": "#FC8D62",
+"pathsize":        1,
+"pathlinetype":        1,
+"label": "validation",
+"pointfill": "#FC8D62",
+"pointshape":       19,
+"pointcolour": "#BEBEBE",
+"pointsize":        3,
+"pointstroke":      0.5 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+      10,
+      20,
+      30,
+      40,
+      50 
+] 
+],
+"y": [
+ [
+       -1,
+       0,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        0,
+       5,
+      10,
+      15,
+      20,
+      25,
+      30,
+      35,
+      40,
+      45,
+      50 
+] 
+],
+"y": [
+ [
+       -1,
+    -0.5,
+       0,
+     0.5,
+       1,
+     1.5 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        0,
+      10,
+      20,
+      30,
+      40,
+      50 
+],
+"xlab": [
+ "0",
+"10",
+"20",
+"30",
+"40",
+"50" 
+],
+"xrange": [       -2,       53 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -1,
+       0,
+       1 
+],
+"ylab": [
+ "-1",
+"0",
+"1" 
+],
+"yrange": [ -1.172849, 1.869434 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "position",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "signal",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "0",
+"10",
+"20",
+"30",
+"40",
+"50" 
+],
+"ylabs": [
+ "-1",
+"0",
+"1" 
+],
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom1_segment_data",
+"geom2_point_data",
+"geom3_vline_data",
+"geom4_segment_data" 
+] 
+},
+"loss": {
+ "panel_margin_lines":     0.27,
+"legend": {
+ "point": {
+ "guide": "legend",
+"geoms": "point",
+"title": "point",
+"class": "point",
+"selector": "point",
+"is_discrete": true,
+"legend_type": "fill",
+"text_size": "9.6pt",
+"title_size": "12pt",
+"entries": [
+ {
+ "pointfill": "#000000",
+"pointshape":       19,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointstroke":      0.5,
+"label": "min" 
+},
+{
+ "pointfill": "transparent",
+"pointshape":       19,
+"pointcolour": "#000000",
+"pointsize":        4,
+"pointstroke":      0.5,
+"label": "other" 
+} 
+] 
+} 
+},
+"strips": {
+ "top": [
+ "" 
+],
+"right": [
+ "" 
+],
+"n": {
+ "top":        0,
+"right":        0 
+} 
+},
+"layout": {
+ "PANEL": [ 1 ],
+"ROW": [ 1 ],
+"COL": [ 1 ],
+"SCALE_X": [ 1 ],
+"SCALE_Y": [ 1 ],
+"AXIS_X": [ true ],
+"AXIS_Y": [ true ],
+"coord_fixed": [ false ],
+"width_proportion": [        1 ],
+"height_proportion": [        1 ] 
+},
+"panel_background": {
+ "fill": "#FFFFFF",
+"colour": "transparent",
+"size":      0.5,
+"linetype":        1 
+},
+"panel_border": {
+ "fill": "transparent",
+"colour": "#7F7F7F",
+"size":      0.5,
+"linetype":        1 
+},
+"grid_major": {
+ "colour": "#E5E5E5",
+"size":      0.2,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+        1,
+       5,
+      10,
+      15,
+      20,
+      25 
+] 
+],
+"y": [
+ [
+       -3,
+      -1,
+       1 
+] 
+] 
+} 
+},
+"grid_minor": {
+ "colour": "#FAFAFA",
+"size":      0.5,
+"linetype":        1,
+"lineend": "butt",
+"loc": {
+ "x": [
+ [
+       -1,
+       1,
+       3,
+       5,
+     7.5,
+      10,
+    12.5,
+      15,
+    17.5,
+      20,
+    22.5,
+      25,
+      27,
+      29 
+] 
+],
+"y": [
+ [
+       -4,
+      -3,
+      -2,
+      -1,
+       0,
+       1 
+] 
+] 
+} 
+},
+"axis1": {
+ "x": [
+        1,
+       5,
+      10,
+      15,
+      20,
+      25 
+],
+"xlab": [
+ "1",
+"5",
+"10",
+"15",
+"20",
+"25" 
+],
+"xrange": [     -1.5,     31.5 ],
+"xline": false,
+"xticks": true,
+"y": [
+       -3,
+      -1,
+       1 
+],
+"ylab": [
+ "1e-03",
+"1e-01",
+"1e+01" 
+],
+"yrange": [ -4.473631, 1.586998 ],
+"yline": false,
+"yticks": true 
+},
+"xtitle": "segments",
+"strip_text_xsize": "12pt",
+"xsize": "12pt",
+"xangle":        0,
+"xanchor": "middle",
+"ytitle": "Total_Square_Loss",
+"strip_text_ysize": "12pt",
+"ysize": "12pt",
+"yangle":        0,
+"yanchor": "end",
+"xlabs": [
+ "1",
+"5",
+"10",
+"15",
+"20",
+"25" 
+],
+"ylabs": [
+ "1e-03",
+"1e-01",
+"1e+01" 
+],
+"title_size": "14.4pt",
+"options": {
+ "width":      400,
+"height":      400 
+},
+"span": {
+ "rowspan": null,
+"colspan": null,
+"last_in_row": null 
+},
+"geoms": [
+ "geom5_line_loss",
+"geom6_point_loss",
+"geom7_labelaligned_loss",
+"geom8_tallrect_loss" 
+] 
+} 
+},
+"source": "https://github.com/tdhock/binseg-model-selection/blob/main/figure-cv-interactive/figure-one-split.R",
+"title": "Cross-validation for change-point model selection" 
+}
